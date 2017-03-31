@@ -48,8 +48,8 @@ printf("           /       \\ \n");	 gotoXY(9,30);
 	for (i=0;i<=count;i++)
 	{
 		setFGcolor(31+i%10);
-		if (120-wf[i].slevel > 55) row = 55;
-			else row = 120-wf[i].slevel;
+		if (-20+wf[i].slevel > 15) row = 15;
+			else row = -20+wf[i].slevel;
 		draw_rec(row,wf[i].channel);
 		gotoXY(row,wf[i].channel*7-3);
 		printf("%s",wf[i].essid);
