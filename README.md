@@ -1,6 +1,6 @@
-#Wifi scanner
-#Written by Nguyen The Anh
-#Run for Raspberry Pi 3
+#Wifi scanner 
+#Written by Nguyen The Anh 
+#Run for Raspberry Pi 3 
 ----------------------------------
 This program will show you wifi networks in your area
 This program is written for Linux machine.
