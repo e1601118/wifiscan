@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include "wifiscan.h"
 #include "graph.h"
@@ -44,15 +45,15 @@ printf("           /       \\ \n");	 gotoXY(9,30);
 	gotoXY(10,30);
 	printf("Wifi scanner - %d APs were found",count);
 	gotoXY(60,1);
-	for (i=1;i<=13;i++) printf("%7.d",i);
+	for (i=1;i<=13;i++) printf("%7.d",i);			//Write out the numbers of channels
 	for (i=0;i<=count;i++)
 	{
 		setFGcolor(31+i%10);
-		if (-20+wf[i].slevel > 50) row = 50;
-			else row = -20+wf[i].slevel;
+		if (-35+wf[i].slevel > 55) row = 55;		//Scale the wifi columns
+			else row = -35+wf[i].slevel;		//Scale the wifi columns
 		if (row<15) row = 15;
-		draw_rec(row,wf[i].channel);
-		gotoXY(row,wf[i].channel*7-3);
+		draw_rec(row,wf[i].channel);			//Draw a rectangular
+		gotoXY(row,wf[i].channel*7-strlen(wf[i].essid)/2);	//Goto x;y to write wifi essid
 		printf("%s",wf[i].essid);
 		resetColor();
 	}
@@ -61,18 +62,18 @@ printf("           /       \\ \n");	 gotoXY(9,30);
 void draw_rec(int top, int channel)
 {
 	int i=0;
-	for (i=top+1;i<=52;i++)
+	for (i=top+1;i<=59;i++)
 	{
 		gotoXY(i,channel*7-15);
-		if (channel*7-15>0)
+		if (channel*7-15>0)		//If it's still on the screen
 			printf("|");
-		gotoXY(i,channel*7+15);
+		gotoXY(i,channel*7+15);		//Print the oposite edge
 		printf("|");
 	}
-	for (i=channel*7-15;i<=channel*7+15;i++)
+	for (i=channel*7-15;i<=channel*7+15;i++)//Print the horizontal edge
 	{
 		gotoXY(top,i);
 		if (i>0)
-		printf("_");
+		printf("-");
 	}
 }
