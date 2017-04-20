@@ -2,7 +2,7 @@ OBJ = main.o wifiscan.o graph.o
 APPNAME = wifi.a
 
 $(APPNAME) : $(OBJ)
-	gcc -o $(APPNAME) $(OBJ) -lm -lcurl
+	gcc -o $(APPNAME) $(OBJ) -lm
 
 %.o : %.c 
 	gcc -c -o $@ $< 
