@@ -33,14 +33,14 @@ void graph(WIFI_INFO wf[], int count)
 	int row = 0;
 	gotoXY(1,30);
 	setFGcolor(32);
-printf("  .;'                     `;,\n"); gotoXY(2,30);
-printf(" .;'  ,;'             `;,  `;,\n");  gotoXY(3,30);
-printf(".;'  ,;'  ,;'     `;,  `;,  `;,\n");  gotoXY(4,30);
-printf("::   ::   :   ( )   :   ::   ::\n");	 gotoXY(5,30);
-printf(" :.  ':.  ':. /_\\ ,:'  ,:'  ,::\n");  gotoXY(6,30);
-printf("  :.  ':.    /___\\    ,:'  ,:\n");  gotoXY(7,30);
-printf("   :.       /_____\\      ,:\n");  gotoXY(8,30);
-printf("           /       \\ \n");	 gotoXY(9,30);
+	printf("  .;'                     `;,\n"); gotoXY(2,30);	//I coppied this from another project (wifite)
+	printf(" .;'  ,;'             `;,  `;,\n");  gotoXY(3,30);
+	printf(".;'  ,;'  ,;'     `;,  `;,  `;,\n");  gotoXY(4,30);
+	printf("::   ::   :   ( )   :   ::   ::\n");	 gotoXY(5,30);
+	printf(" :.  ':.  ':. /_\\ ,:'  ,:'  ,::\n");  gotoXY(6,30);
+	printf("  :.  ':.    /___\\    ,:'  ,:\n");  gotoXY(7,30);
+	printf("   :.       /_____\\      ,:\n");  gotoXY(8,30);
+	printf("           /       \\ \n");	 gotoXY(9,30);
 	resetColor();
 	gotoXY(10,30);
 	printf("Wifi scanner - %d APs were found",count);
